@@ -3,13 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {Route, Switch, BrowserRouter} from 'react-router-dom';
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Interactions from './Interactions';
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+            <Switch>
+                <Route exact path='/' component={App} />
+                <Route exact path='/interactions' component={Interactions} />
+            </Switch>
+        </BrowserRouter>,
   document.getElementById('root')
 );
 

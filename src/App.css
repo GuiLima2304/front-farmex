@@ -1,6 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
 .App {
   text-align: center;
   margin-top: 50px;
+}
+
+h1 {
+  font-family: 'Bree Serif', serif;
+}
+
+.title-farmex {
+  font-size: 85px !important;
+}
+
+.apresentation-text {
+  text-align: center;
+  padding: 2%;
+}
+
+.button-interaction {
+  margin-top: 50px !important;
+}
+
+.btn-success {
+  margin-top: 5%;
+}
+
+button {
 }
 
 input {

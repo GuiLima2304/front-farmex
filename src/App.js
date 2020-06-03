@@ -1,36 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { useForm } from "react-hook-form"
+import { Link } from 'react-router-dom';
 import { Button, Form } from 'react-bootstrap';
 
-function App() {
- 
-  const {register, handleSubmit, error} = useForm();
+import Interactions from './Interactions';
 
-  const onSubmit = (data) => {
-    console.log(data)
-  }
+function App() {
 
   return (
     <div className="external-style">
     <div className="App">
-      <h1>Farmex</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="text" placeholder="Medicamento 1" name="medicamento01" ref={register}/>
-        <input type="text" placeholder="Medicamento 2" name="medicamento01" ref={register}/>
-        <input type="text" placeholder="Sintomas 01" name="sintoma01" ref={register}/>
-        <input type="text" placeholder="Sintomas 02" name="sintoma02" ref={register}/>
-        <input type="text" placeholder="Sintomas 03" name="sintoma03" ref={register}/>
-        {/* <Form.Control as="select" ref={register}>
-          <option>Dor de cabeça</option>
-          <option>Febre</option>
-          <option>Tosse</option>
-          <option>Tontura</option>
-          <option>Diabete</option>
-        </Form.Control> */}
-        <Button type="submit" variant="success">Enviar</Button>
-      </form>
+      <h1 class="title-farmex">Farmex</h1>
+      <span class="apresentation-text">Bem Vindo - Farmex tem o objetivo de auxiliar profissionais da área da saúde com interações
+        medicamentosas, este projeto está em desenvolvimento, então não é algo totalmente completo,
+        clicando no botão abaixo, será redirecionado para a página de interações !!!
+      </span><br />
+
+      <Link to="/interactions">
+        <Button class="button-interaction" variant="success">Interações medicamentosa</Button>
+      </Link>
     </div>
     </div>
   );
